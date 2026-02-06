@@ -107,9 +107,16 @@
     }
 
     .result {
-      display: none;
-      margin-top: 18px;
-      animation: pop .35s ease;
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.95);
+  z-index: 9000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: pop .35s ease;
     }
 
     .result h2 {
