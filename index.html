@@ -126,6 +126,17 @@
       from { transform: scale(.96); opacity: 0; }
       to { transform: scale(1); opacity: 1; }
     }
+    <!-- GIF POPUP -->
+  <div id="gifPopup" class="popup hidden">
+    <div class="popup-card">
+      <p class="popup-text">YAY! 🎉</p>
+      <img
+        src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif"
+        class="popup-gif"
+        alt="celebrate"
+      />
+    </div>
+  </div>
   </style>
 </head>
 
@@ -171,7 +182,7 @@
             fill="#ff7aa2"/>
     </svg>
 
-    <h1>Feby, bisa kan tgl 1 Maret 2026? 🫣</h1>
+    <h1>Feby, bisa kan tgl 1 Maret 2026? </h1>
 
     <section class="button-zone" id="zone">
       <button id="yesBtn">bisaaa 😆</button>
@@ -190,13 +201,24 @@
       />
     </section>
   </main>
-
+<!-- GIF POPUP -->
+  <div id="gifPopup" class="popup hidden">
+    <div class="popup-card">
+      <p class="popup-text">YAY! 🎉</p>
+      <img
+        src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif"
+        class="popup-gif"
+        alt="celebrate"
+      />
+    </div>
+  </div>
   <script>
     const zone = document.getElementById("zone");
     const yesBtn = document.getElementById("yesBtn");
     const noBtn = document.getElementById("noBtn");
     const result = document.getElementById("result");
     const hint = document.getElementById("hint");
+    const gifPopup = document.getElementById("gifPopup");
 
     /* ---------- CONFETTI ---------- */
     const confettiCanvas = document.getElementById("confettiCanvas");
@@ -294,6 +316,7 @@
       zone.style.display = "none";
       hint.style.display = "none";     // HIDE THE HINT
       result.style.display = "block";
+      gifPopup.classList.remove("hidden");
       resizeConfettiCanvas();
       fullScreenConfetti();
     });
