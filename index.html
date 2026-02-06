@@ -107,16 +107,9 @@
     }
 
     .result {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.95);
-  z-index: 9000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  animation: pop .35s ease;
+      display: none;
+      margin-top: 18px;
+      animation: pop .35s ease;
     }
 
     .result h2 {
@@ -201,6 +194,7 @@
     <div class="hint" id="hint">“Ngga” artinya bisaa 🙃</div>
 
     <section class="result" id="result">
+      <h2>YAY! 🎉</h2>
       <img
         class="fireworks"
         src="https://media1.tenor.com/m/V30K6aGxJSYAAAAd/stunned-wow.gif"
@@ -208,17 +202,6 @@
       />
     </section>
   </main>
-<!-- GIF POPUP -->
-  <div id="gifPopup" class="popup hidden">
-    <div class="popup-card">
-      <p class="popup-text">YAY! 🎉</p>
-      <img
-        src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif"
-        class="popup-gif"
-        alt="celebrate"
-      />
-    </div>
-  </div>
   <script>
     const zone = document.getElementById("zone");
     const yesBtn = document.getElementById("yesBtn");
